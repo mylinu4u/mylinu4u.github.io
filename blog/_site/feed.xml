@@ -6,183 +6,35 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Jul 2016 13:58:47 +0900</pubDate>
-    <lastBuildDate>Tue, 19 Jul 2016 13:58:47 +0900</lastBuildDate>
+    <pubDate>Tue, 19 Jul 2016 14:09:26 +0900</pubDate>
+    <lastBuildDate>Tue, 19 Jul 2016 14:09:26 +0900</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
-        <title>맥 초기화시 개발환경 구축</title>
-        <description>&lt;h3 id=&quot;section&quot;&gt;맥 초기화시 개발환경 세팅&lt;/h3&gt;
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
-&lt;h4 id=&quot;section-1&quot;&gt;-기준 엘캐피탄&lt;/h4&gt;
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Xcode 설치&lt;/li&gt;
-  &lt;li&gt;homebrew 설치&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://macnews.tistory.com/3728&quot;&gt;OS X 10.11 엘 캐피탄에 ‘홈브류(Homebrew)’를 설치하는 방법&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;terminal small&quot;&gt;
-ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-&lt;/pre&gt;
-&lt;ol&gt;
-  &lt;li&gt;터미널 설정&lt;/li&gt;
-  &lt;li&gt;CMD+, 눌러 테마 홈브류, 테스트 크기등 설정&lt;/li&gt;
-  &lt;li&gt;Oh My ZSH! 설치&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://nolboo.github.io/blog/2015/08/21/oh-my-zsh&quot;&gt;터미널 초보의 필수품인 Oh My ZSH!를 사용하자&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;zsh 설치!!
-    &lt;ol&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ zsh --version&lt;/code&gt; 로 설치 확인&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ brew update&lt;/code&gt; 로 최신 업뎃 or &lt;code class=&quot;highlighter-rouge&quot;&gt;$ brew install zsh&lt;/code&gt; 로 설치&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ which zsh&lt;/code&gt;로 zsh 경로 확인 &lt;code class=&quot;highlighter-rouge&quot;&gt;$ chsh -s /bin/zsh&lt;/code&gt;로 쉘 경로 변경&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ echo $SHELL&lt;/code&gt;로 쉘경로 변경확인&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Oh My Zsh 설치!!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;terminal small&quot;&gt;
-$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-&lt;/pre&gt;
-&lt;ol&gt;
-  &lt;li&gt;터미널(zsh)에서 ll 동작 할 수 있도록 설정&lt;/li&gt;
-  &lt;li&gt;alias ll=’ls -lhp’ 추가&lt;/li&gt;
-  &lt;li&gt;bash 에서 ll사용
-    &lt;ol&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vi .bash_profile&lt;/code&gt; bash프로필 수정&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;alias ll=&#39;ls -nhp&#39;&lt;/code&gt;추가&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt; 저장하고 나오기&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;zsh에서 ll사용
-    &lt;ol&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vi ~/.zshrc&lt;/code&gt; zsh설정 들어가서&lt;/li&gt;
-      &lt;li&gt;젤 마지막쪽에 &lt;code class=&quot;highlighter-rouge&quot;&gt;alias ll=&#39;ls -nhp&#39;&lt;/code&gt; 추가&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt; 저장하고 나오기&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Git 설치&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/book/ko/v1/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98&quot;&gt;맥 GIT 설치&lt;/a&gt;
-    &lt;ol&gt;
-      &lt;li&gt;&lt;del&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;$ sudo port install git-core +svn +doc +bash_completion +gitweb&lt;/code&gt;&lt;/del&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ git version&lt;/code&gt; 깃 버전 확인&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ git config --global user.name &quot;이름&quot;&lt;/code&gt; 이름설정&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ git config --global user.email linu4u@example.com&lt;/code&gt; 메일 설정&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Git 세팅 &amp;gt; github ssh키값 설정&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/generating-ssh-keys&quot;&gt;Generating SSH keys - 깃허브&lt;/a&gt;
-    &lt;ol&gt;
-      &lt;li&gt;SSH키를 새로 생성 &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;$ ssh-keygen -t rsa -b 4096 -C &quot;메일주소&quot;&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Enter a file in which to save the key (/Users/you/.ssh/id_rsa):&lt;/code&gt; 나오면 엔터!&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Enter passphrase (empty for no passphrase):&lt;/code&gt; 라고 나오면 암호 입력!(짧으면 에러남)&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Enter same passphrase again:&lt;/code&gt; 라고 나오면 한번더 엔터&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ eval &quot;$(ssh-agent -s)&quot;&lt;/code&gt; 라고 입력!&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ ssh-add ~/.ssh/id_rsa&lt;/code&gt; 라고 입력!&lt;/li&gt;
-      &lt;li&gt;키값 복사하기 &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;$ pbcopy &amp;lt; ~/.ssh/id_rsa.pub&lt;/code&gt; 라고 입력!&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/settings/keys&quot;&gt;깃허브 SSH and GPG keys 세팅&lt;/a&gt; 에 &lt;code class=&quot;highlighter-rouge&quot;&gt;New SSH key&lt;/code&gt;를 클릭하여 닉네임 지정후 붙여넣기 !&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opentutorials.org/course/470/2489&quot;&gt;sass 설치 및 적용&lt;/a&gt;
-    &lt;ol&gt;
-      &lt;li&gt;맥과 리눅스에는 ruby가설치 되어 있기 때문에 &lt;code class=&quot;highlighter-rouge&quot;&gt;$ gem install sass&lt;/code&gt;를 입력해서 sass 컴파일러를 설치한다.&lt;/li&gt;
-      &lt;li&gt;CSS 폴더에가서 &lt;code class=&quot;highlighter-rouge&quot;&gt;$ sass --watch style.scss:style.css --style expanded --sourcemap=none&lt;/code&gt; 으로 실행&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;작업폴더 바로가기 만들기
-    &lt;ol&gt;
-      &lt;li&gt;ln -s 소스폴더 별명폴더&lt;/li&gt;
-      &lt;li&gt;ex) &lt;code class=&quot;highlighter-rouge&quot;&gt;$ ln -s /Users/linu4u/Dropbox/1.lates/0.HTML/1.GIT/linu4u 2.git&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;D2Coding 설치
-    &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;http://dev.naver.com/projects/d2coding/&quot;&gt;네이버 개발자센터 - D2 Coding 글꼴&lt;/a&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://macnews.tistory.com/3188&quot;&gt;스크린샷 저장 폴더 위치 변경&lt;/a&gt;
-    &lt;ol&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ defaults write com.apple.screencapture location 저장할폴더위치 &lt;/code&gt;
-        &lt;ol&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ defaults write com.apple.screencapture location &lt;/code&gt; 한다음 폴더 드래서 해서 지정하기도 가능&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ killall SystemUIServer&lt;/code&gt; 실행해서 바로 적용&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;jekyll 서비스 설치&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://nolboo.github.io/blog/2013/10/15/free-blog-with-github-jekyll/&quot;&gt;지킬로 깃허브에 무료 블로그 만들기&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://linu4u.github.io/jekyll/2015/08/25/jekyll-start&quot;&gt;Jekyll 시작하기 - 리누깃헙&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
 </description>
-        <pubDate>Sat, 03 Oct 2015 00:00:00 +0900</pubDate>
-        <link>http://yourdomain.com/dev/2015/10/03/mac_frist_setting.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/dev/2015/10/03/mac_frist_setting.html</guid>
+        <pubDate>Tue, 19 Jul 2016 14:09:07 +0900</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/07/19/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/07/19/welcome-to-jekyll.html</guid>
         
-        <category>xcode</category>
-        
-        <category>mac</category>
-        
-        <category>homebrew</category>
-        
-        <category>zsh</category>
-        
-        <category>git</category>
-        
-        <category>sass</category>
         
         <category>jekyll</category>
         
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Jekyll 시작하기</title>
-        <description>&lt;h4 id=&quot;jekyll----&quot;&gt;오늘은 jekyll을 살짝 이해한 역사적인 날이다.&lt;/h4&gt;
-&lt;p&gt;분명 여러가지를 까먹을 것이기에 몇가지 정리를 해놓도록하자&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;- jekyll 관련 Url&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;영문 페이지 - http://jekyllrb.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jekyllrb-ko.github.io/&quot;&gt;한글 페이지 - http://jekyllrb-ko.github.io/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://nolboo.github.io/blog/2013/10/15/free-blog-with-github-jekyll/&quot;&gt;가장 도움이 많이된 블로그 - https://nolboo.github.io/blog/2013/10/15/free-blog-with-github-jekyll/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;- 내 생각에 중요한 명령들111&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;설치하기
-&lt;code class=&quot;highlighter-rouge&quot;&gt;$ gem install jekyll&lt;/code&gt; // jekyll 인스톨 ( 필요할경우 sudo 이용)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;생성하기
-&lt;code class=&quot;highlighter-rouge&quot;&gt;$ mkdir 폴더명&lt;/code&gt; // 깃허브 저상소이면 더 좋음
-&lt;code class=&quot;highlighter-rouge&quot;&gt;$ jekyll new 폴더명&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;서버실행하기
-&lt;code class=&quot;highlighter-rouge&quot;&gt;$ jekyll serve —watch&lt;/code&gt;  // 해당폴더 내에서 실행하면 서버가 실행되며 –watch 명려으로 실시간 변경 내용반영됨 ( loclahost:4000 )으로 확인가능하다&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;빌드하기
-&lt;code class=&quot;highlighter-rouge&quot;&gt;$ jekyll build&lt;/code&gt; // 빌드를 하게 되면 site라는 폴더에 Html로 완전히 빌드가 되게되어 깃허브가 아니라도 어디든 업로드가 가능함&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;..&lt;/p&gt;
-</description>
-        <pubDate>Tue, 25 Aug 2015 00:00:00 +0900</pubDate>
-        <link>http://yourdomain.com/blog/2015/08/25/jekyll-start.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/blog/2015/08/25/jekyll-start.html</guid>
-        
-        <category>jekyll</category>
-        
-        <category>github</category>
-        
-        
-        <category>blog</category>
+        <category>update</category>
         
       </item>
     
