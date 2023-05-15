@@ -16,7 +16,7 @@ tags: [xcode, mac, homebrew, zsh, git, sass, jekyll]
 1. homebrew 설치
   1. [OS X 10.11 엘 캐피탄에 '홈브류(Homebrew)'를 설치하는 방법](http://macnews.tistory.com/3728)
 <pre class="terminal small">
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 </pre>
 1. 터미널 설정
   1. CMD+, 눌러 테마 홈브류, 테스트 크기등 설정
